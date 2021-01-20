@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: xxl-job-executor-config
+  namespace: xxl-job
+data:
+  application.properties: |-
+    # web port
+    server.port=80
+    # no web
+    # spring.main.web-environment=false
+
+    # log config
+    logging.config=classpath:logback.xml
+
+
+    ### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+    xxl.job.admin.addresses=http://xxl-job-admin
+
+    ### xxl-job, access token
+    xxl.job.accessToken=
+
+    ### xxl-job executor appname
+    xxl.job.executor.appname=xxl-job-executor
+    ### xxl-job executor registry-address: default use address to registry , otherwise use ip:port if address is null
+    xxl.job.executor.address=
+    ### xxl-job executor server-info
+    xxl.job.executor.ip=
+    xxl.job.executor.port=8080
+    ### xxl-job executor log-path
+    xxl.job.executor.logpath=xxl-job/executor.log
+    ### xxl-job executor log-retention-days
+    xxl.job.executor.logretentiondays=30
