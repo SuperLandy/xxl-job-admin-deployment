@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: xxl-job-admin
+  namespace: xxl-job
+  labels:
+    app: xxl-job-admin
+spec:
+  ports:
+    - name: job-admin
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: xxl-job-admin
+  type: ClusterIP
+  sessionAffinity: None
