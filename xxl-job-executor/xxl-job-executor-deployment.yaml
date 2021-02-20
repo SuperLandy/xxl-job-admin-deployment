@@ -7,7 +7,6 @@ metadata:
     app: xxl-job-executor
     version: v1
 spec:
-  replicas: 5
   selector:
     matchLabels:
       app: xxl-job-executor
