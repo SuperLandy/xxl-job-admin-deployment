@@ -28,7 +28,7 @@ spec:
         - name: harborsecret
       containers:
         - name: xxl-job-admin
-          image: harbor.huaweicloud.com/test-env/xxl-job-admin:v65
+          image: harbor.huaweicloud.com/test-env/xxl-job-admin:v69
           volumeMounts:
           - mountPath: /home/application.properties
             name: admin-config
